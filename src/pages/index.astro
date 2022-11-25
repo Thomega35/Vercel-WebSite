@@ -3,17 +3,17 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, LINKEDIN, GITHUB, EMAIL, PHONE } from '../config';
+import DrawerLayout from '../layouts/DrawerLayout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<DrawerLayout>
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<p>
+			<p class="text-xl font-bold">
 				👉 Je suis un étudiant dynamique, sociable et motivé.
 			</p>
 			<p>
@@ -37,4 +37,4 @@ import { SITE_TITLE, SITE_DESCRIPTION, LINKEDIN, GITHUB, EMAIL, PHONE } from '..
 		</main>
 		<Footer />
 	</body>
-</html>
+</DrawerLayout>
