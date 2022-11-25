@@ -1,0 +1,29 @@
+---
+import HeaderLink from "../components/HeaderLink.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>404: Not Found</title>
+        <link rel="stylesheet" href="./404.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <span class="top"></span>
+        <main class="center">
+            <img src='/logomark-light.svg' alt="Astro Logo" height="120px" width="120px" />
+            <h1><span class="statusCode">404: </span> Not found </h1>
+            <pre id="path"/>
+            <script>
+                const path = document.getElementById('path') as HTMLPreElement | null;
+                if (path) {
+                    path.innerText = window.location.pathname;
+                }
+                </script>
+        </main>
+        <span class="bottom">
+            👀 Evrything okay?&nbsp;<HeaderLink href="/">No</HeaderLink>&nbsp;
+        </span>
+    </body>
+</html>
