@@ -18,7 +18,7 @@ test('get started link', async ({ page }) => {
 });
 
 test('contact navigation', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('https://beta.thomega.fr/');
 
   await page.getByRole('link', { name: 'Contests' }).click();
   await page.getByRole('link', { name: 'Personal projects' }).click();
