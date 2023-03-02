@@ -26,3 +26,13 @@ test('contact navigation', async ({ page }) => {
   
   await expect(page).toHaveURL(/.*contest/);
 });
+
+test('test', async ({ page }) => {
+  await page.goto('https://beta.thomega.fr/about');
+  await page.getByPlaceholder('Type here').click();
+  await page.getByPlaceholder('Type here').fill('John Doe');
+  await page.getByRole('button', { name: 'Submit' }).click();
+
+  // Expect to find the text "John Doe" in the page.
+  await expect(page.getByRole('heading', { name: 'John Doe' })).toBeTruthy();
+});
