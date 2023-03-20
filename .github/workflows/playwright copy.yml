@@ -1,7 +1,7 @@
 name: Playwright Tests
 on:
   pull_request:
-    types: [ opened ]
+    types: [ closed ]
     branches: [ dev ]
 jobs:
   run_tests:
@@ -13,8 +13,8 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: Copy .env file from Pre-Prod
-      run: cp C:\Users\Moi\Documents\ATOS\.env .\.env
+    # - name: Copy .env file from Pre-Prod
+    #   run: cp C:\Users\Moi\Documents\ATOS\.env .\.env
     - name: Install swig
       if: "startsWith(runner.os, 'windows')"
       run: |

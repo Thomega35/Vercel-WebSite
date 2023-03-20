@@ -30,9 +30,9 @@ test('contact navigation', async ({ page }) => {
 test('test', async ({ page }) => {
   await page.goto('https://beta.thomega.fr/about');
   await page.getByPlaceholder('Type here').click();
-  await page.getByPlaceholder('Type here').fill('John Doe');
+  await page.getByPlaceholder('Type here').fill(process.env.USERNAME!);
   await page.getByRole('button', { name: 'Submit' }).click();
 
   // Expect to find the text "John Doe" in the page.
-  await expect(page.getByRole('heading', { name: 'John Doe' })).toBeTruthy();
+  await expect(page.getByRole('heading', { name: process.env.USERNAME })).toBeTruthy();
 });
