@@ -6,6 +6,7 @@
     "start": "npx playwright test"
   },
   "dependencies": {
-    "@playwright/test": "^1.31.2"
+    "@playwright/test": "^1.31.2",
+    "dotenv": "^16.0.3"
   }
 }
