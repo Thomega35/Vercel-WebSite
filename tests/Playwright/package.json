@@ -1,0 +1,11 @@
+{
+  "name": "@example/blog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "npx playwright test"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.31.2"
+  }
+}
