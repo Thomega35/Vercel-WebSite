@@ -49,11 +49,6 @@ export default defineConfig({
     },
 
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
@@ -69,10 +64,10 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { channel: 'msedge' },
-    // },
+    {
+      name: 'Microsoft Edge',
+      use: { channel: 'msedge' },
+    },
     // {
     //   name: 'Google Chrome',
     //   use: { channel: 'chrome' },
