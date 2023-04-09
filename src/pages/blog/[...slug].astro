@@ -3,6 +3,7 @@ import { CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 import DrawerLayout from '../../layouts/DrawerLayout.astro';
 
+//TODO make this code SSR friendly
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts.map((post) => ({
