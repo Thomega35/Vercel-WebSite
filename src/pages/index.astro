@@ -6,42 +6,45 @@ import { SITE_TITLE, SITE_DESCRIPTION, LINKEDIN, GITHUB, EMAIL, PHONE } from '..
 import DrawerLayout from '../layouts/DrawerLayout.astro';
 ---
 
-<DrawerLayout>
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<p class="text-xl font-bold">
-				👉 Je suis un étudiant dynamique, sociable et motivé.
-			</p>
-			<p>
-				🤵 J'ai eu l'opportunité de rejoindre l'ISATI : le Bureau des Élèves de l'ESIR. Cette expérience m'a permis de faire nombre de rencontres enrichissantes ainsi que de progresser dans l'organisation et la gestion d'événements. 
-			</p>
-			<p>
-				🖥️ Je suis passionné par l'informatique : l’automatisation des tâches, la simplification des efforts et sa diversité. Je suis ainsi toujours à l'affût de nouveaux projets innovants, de compétitions et de conférences pour perfectionner mes compétences techniques.
-			</p>
-			<p>
-				🔎 Toujours dans cette dynamique de monter en compétences, je recherche :
-				⇒ Un stage de 3 mois entre Janvier et Mars 2023
-				⇒ Une alternance d'1 an à partir de Septembre 2023
-			</p>
-			<p style="padding-top: 20px;">
-				Me contacter : Thomas Delapart 
-				<li> 📧 <a href="mailto:thomega35@gmail.com"> {EMAIL} </a> </li>
-				<li> <a href={LINKEDIN}> LinkedIn </a> </li>
-				<li> <a href={GITHUB}> GitHub </a> </li>
-				<li> 📞 {PHONE}</li>
-			</p>
-			<p style="padding-top: 20px;">
-				Get my Resume
-			</p>
-			<p style="padding-top: 20px;">
-				<!-- Open external link in new tab : cv.thomega.fr -->
-				<button class="btn btn-wide" onclick="window.open('https://cv.thomega.fr', '_blank');"> DOWNLOAD </button>
-			</p>
-			<Footer />
-		</main>
-	</body>
-</DrawerLayout>
+<!DOCTYPE html>
+<html lang="en">
+	<DrawerLayout>
+		<head>
+			<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		</head>
+		<body>
+			<Header title={SITE_TITLE} />
+			<main>
+				<p class="text-xl font-bold">
+					👉 Je suis un étudiant dynamique, sociable et motivé.
+				</p>
+				<p>
+					🤵 J'ai eu l'opportunité de rejoindre l'ISATI : le Bureau des Élèves de l'ESIR. Cette expérience m'a permis de faire nombre de rencontres enrichissantes ainsi que de progresser dans l'organisation et la gestion d'événements. 
+				</p>
+				<p>
+					🖥️ Je suis passionné par l'informatique : l’automatisation des tâches, la simplification des efforts et sa diversité. Je suis ainsi toujours à l'affût de nouveaux projets innovants, de compétitions et de conférences pour perfectionner mes compétences techniques.
+				</p>
+				<p>
+					🔎 Toujours dans cette dynamique de monter en compétences, je recherche :
+					⇒ Un stage de 3 mois entre Janvier et Mars 2023
+					⇒ Une alternance d'1 an à partir de Septembre 2023
+				</p>
+				<p style="padding-top: 20px;">
+					Me contacter : Thomas Delapart 
+					<li> 📧 <a href="mailto:thomega35@gmail.com"> {EMAIL} </a> </li>
+					<li> <a href={LINKEDIN}> LinkedIn </a> </li>
+					<li> <a href={GITHUB}> GitHub </a> </li>
+					<li> 📞 {PHONE}</li>
+				</p>
+				<p style="padding-top: 20px;">
+					Get my Resume
+				</p>
+				<p style="padding-top: 20px;">
+					<!-- Open external link in new tab : cv.thomega.fr -->
+					<button class="btn btn-wide" onclick="window.open('https://cv.thomega.fr', '_blank');"> DOWNLOAD </button>
+				</p>
+				<Footer />
+			</main>
+		</body>
+	</DrawerLayout>
+</html>

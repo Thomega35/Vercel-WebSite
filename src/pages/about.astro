@@ -3,28 +3,31 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import DrawerLayout from '../layouts/DrawerLayout.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-    <body>
-        <Header title={SITE_TITLE} />
+    <DrawerLayout>
+        <head>
+            <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        </head>
+        <body>
+            <Header title={SITE_TITLE} />
 
-        <script type="text/javascript">
-            function getInputContent() {
-                var name = document.getElementById("name").value;
-                document.getElementById("toDisplay").innerHTML = "Hello " + name;
-            }
-        </script>
+            <script type="text/javascript">
+                function getInputContent() {
+                    var name = document.getElementById("name").value;
+                    document.getElementById("toDisplay").innerHTML = "Hello " + name;
+                }
+            </script>
 
-        <h1> Write your name here : </h1>
-        <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" id="name" value="Thomas" />
-        <button class="btn btn-primary" onclick="getInputContent()">Submit</button>
-        <h1 id="toDisplay"></h1>
+            <h1> Write your name here : </h1>
+            <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" id="name" value="Thomas" />
+            <button class="btn btn-primary" onclick="getInputContent()">Submit</button>
+            <h1 id="toDisplay"></h1>
 
-    </body>
-    <Footer />  
+        </body>
+        <Footer /> 
+    </DrawerLayout>
 </html>
