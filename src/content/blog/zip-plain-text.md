@@ -5,13 +5,13 @@ pubDate: "March 26 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
 Titles :
-[One](http://localhost:3000/blog/zip-plain-text/#TechniqueII)
+[One](#TechniqueII)
 [Two](#Technique-II-:-Plain-Text)
 
 In this challenge, we are given the file `Rapport_Audit_BreizhCTF.zip`.
 The text with the file wasn't revelative about the way to find the solution. It just let us know that the Flag with in the .zip file.
 
-## TechniqueI
+## Tentative I : Bruteforce
 
 I started quickly with a simple technique I knew with lock .zip file, the bruteforce. Thanks to the tool "fcrackzip" we can try in less than 5min all the password made of 7 ascii character. The command used :
     fckrackzip Rapport_Audit_BreizhCTF.zip --7
@@ -21,7 +21,7 @@ This didn't work so I tried to use common password, with the same tool you can r
 
 This didn't work either so I went to the next step.
 
-## TechniqueII
+## Technique II : Plain Text Attack
 
 I remembered that when I tried to open the file with the command `unzip` and I got the following error :
     unzip: cannot find zipfile directory in one of Rapport_Audit_BreizhCTF.zip or
