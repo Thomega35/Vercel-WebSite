@@ -1,0 +1,85 @@
+/* reset default styles */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* set the font family and size */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* style the headings */
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 30px 0;
+  }
+  
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 25px 0;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* style links */
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* set the width of the content */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* style code blocks */
+  pre {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  /* style inline code */
+  code {
+    font-style: italic;
+    color: rgb(143, 109, 255);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  /* style blockquotes */
+  blockquote {
+    border-left: 5px solid #ddd;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  /* style lists */
+  ul, ol {
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+  
+  /* style images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+  }
