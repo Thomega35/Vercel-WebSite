@@ -14,15 +14,65 @@
 - This is a Astro / React App in TypeScript
 - This site is hosted on Versel
 - The CI automatically deploy the project after a comit
-- You can access the site at :
-  - thomega.fr
-  - www.thomega.fr
-  - thomas-delapart.vercel.app
+- You can access the site at (Currently nothing) :
+  - https://thomega.fr
+  - https://www.thomega.fr
+  - https://thomas-delapart.vercel.app
+- You can access the beta site :
+  - https://beta.thomega.fr
 
 ### Author
 
 Developed by [Thomas Delapart](https://github.com/Thomega35/) 
-you can reach me by Email : thomega35@gmail.com or Personal umber : 0770261252
+you can reach me by Email : thomega35@gmail.com or Linkedin : https://www.linkedin.com/in/thomas-delapart/  
+
+## 🚀 Project Structure
+
+Inside of this Astro project, you'll see the following folders and files:
+
+```
+├── public/
+│   ├── 404.css
+│   ├── favicon.svg
+│   ├── logomark-light.svg
+│   ├── placeholder-about.svg
+│   ├── placeholder-hero.svg
+│   └── placeholder-social.svg
+├── src/
+│   ├── components/
+│   |   ├── BaseHead.astro
+│   |   ├── Footer.astro
+│   |   ├── FormattedDate.astro
+│   |   ├── Header.astro
+│   |   └── HeaderLink.astro
+│   ├── layouts/
+│   |   ├── BlogPost.astro
+│   |   └── DrawerLayout.astro
+│   └── pages/
+│       ├── Blog/
+│       |   ├── [...slug].astro
+│       |   └── index.astro
+│       ├── 404.astro
+│       ├── about.astro
+│       ├── contest.astro
+│       ├── education.astro
+│       ├── index.astro
+│       ├── personal.astro
+│       └── rss.xml.js
+├── README.md
+├── astro.config.mjs
+├── package-lock.json
+├── package.json
+├── tailwind.config.cjs
+├── todo.md
+└── tsconfig.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
 
 
 # Astro Starter Kit: Blog
@@ -47,28 +97,6 @@ Features:
 - ✅ Sitemap support
 - ✅ RSS Feed support
 - ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-├── public/
-├── src/
-│   ├── components/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
