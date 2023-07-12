@@ -1,7 +1,6 @@
 import { PiArrowLeftBold } from 'react-icons/pi';
-import { TbOmega } from 'react-icons/tb';
+import { TbOmega, TbChevronDown } from 'react-icons/tb';
 import { MdDashboard } from 'react-icons/md';
-import { BsChevronDown } from 'react-icons/bs';
 import { useState } from 'react';
 import { Menus } from '../consts';
 
@@ -26,7 +25,7 @@ const SideBar = () => {
                                 <span  className="text-2xl block float-left" onClick={() => {location.href=menu.href}}> {menu.icon ? menu.icon : <MdDashboard/> }</span>
                                 <span className={`text-base font-medium duration-300 ${!open && "scale-y-0"}`} onClick={() => {location.href=menu.href}}>{menu.title}</span>
                                 {menu.submenu && open && (
-                                    <BsChevronDown className={`text-xl ml-auto duration-200 ${subMenuOpen && "rotate-180"}`} onClick={() => setSubMenuOpen(!subMenuOpen)} />
+                                    <TbChevronDown className={`text-xl ml-auto duration-200 ${subMenuOpen && "rotate-180"}`} onClick={() => setSubMenuOpen(!subMenuOpen)} />
                                 )}
                             </li>
                             {menu.submenu && subMenuOpen && open && (
