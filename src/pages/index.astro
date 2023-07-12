@@ -13,7 +13,8 @@ import DrawerLayout from '../layouts/DrawerLayout.astro';
 			<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		</head>
 		<body>
-			<Header title={SITE_TITLE} />
+			<!-- <Header title={SITE_TITLE} /> -->
+
 			<main>
 				<p class="text-xl font-bold">
 					👉 Je suis un étudiant dynamique, sociable et motivé.
@@ -43,8 +44,9 @@ import DrawerLayout from '../layouts/DrawerLayout.astro';
 					<!-- Open external link in new tab : cv.thomega.fr -->
 					<button class="btn btn-wide" onclick="window.open('https://cv.thomega.fr', '_blank');"> DOWNLOAD </button>
 				</p>
-				<Footer />
 			</main>
+			
+			<Footer />
 		</body>
 	</DrawerLayout>
 </html>
