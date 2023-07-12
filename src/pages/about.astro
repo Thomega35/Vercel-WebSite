@@ -13,7 +13,7 @@ import DrawerLayout from '../layouts/DrawerLayout.astro';
             <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
         </head>
         <body>
-            <Header title={SITE_TITLE} />
+            <!-- <Header title={SITE_TITLE} /> -->
 
             <script type="text/javascript">
                 function getInputContent() {
@@ -26,8 +26,8 @@ import DrawerLayout from '../layouts/DrawerLayout.astro';
             <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" id="name" value="Thomas" />
             <button class="btn btn-primary" onclick="getInputContent()">Submit</button>
             <h1 id="toDisplay"></h1>
-
+            
+            <Footer /> 
         </body>
-        <Footer /> 
     </DrawerLayout>
 </html>
