@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import { MdDashboard, MdAccountBox, MdSchool, MdWork, MdOutlineLibraryBooks, MdPermContactCalendar } from 'react-icons/md';
+import { MdDashboard, MdAccountCircle, MdSchool, MdWork, MdOutlineLibraryBooks, MdPermContactCalendar } from 'react-icons/md';
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
@@ -9,7 +9,7 @@ export const POSTS = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 export const Menus = [
-    { title: "About_Me", icon: <MdAccountBox/>, href: "/" },
+    { title: "About_Me", icon: <MdAccountCircle/>, href: "/" },
     { title: "Projects", icon: <MdDashboard/>, href: "/personal" },
     { title: "Education", icon: <MdSchool/>, href: "/education" },
     { title: "Career", spacing: true, icon: <MdWork/>, href: "/career" },
