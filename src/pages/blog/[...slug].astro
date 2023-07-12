@@ -15,11 +15,14 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await post.render();
+import '../../styles/_layout.mael.css';
 ---
 
 <DrawerLayout>
 	<BlogPost {...post.data}>
+		<div class="md-render" >
 		<h1>{post.data.title}</h1>
 		<Content />
+		<div>
 	</BlogPost>
 </DrawerLayout>
