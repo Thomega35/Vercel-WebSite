@@ -1,17 +1,17 @@
 ---
 title: "Rapport d'Audit"
-description: "Challenge de cracking au BEIZH CTF"
+description: "Challenge de cracking au BREIZH CTF"
 pubDate: "March 26 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
 Titles :
-[One](#TechniqueII)
+[One](#TechniqueI)
 [Two](#Technique-II-:-Plain-Text)
 
 In this challenge, we are given the file `Rapport_Audit_BreizhCTF.zip`.
 The text with the file wasn't revelative about the way to find the solution. It just let us know that the Flag with in the .zip file.
 
-## Tentative I : Bruteforce
+## Technique I : Bruteforce
 
 I started quickly with a simple technique I knew with lock .zip file, the bruteforce. Thanks to the tool "fcrackzip" we can try in less than 5min all the password made of 7 ascii character. The command used :
     fckrackzip Rapport_Audit_BreizhCTF.zip --7
