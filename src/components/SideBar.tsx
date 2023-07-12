@@ -1,7 +1,7 @@
 import { PiArrowLeftBold } from 'react-icons/pi';
 import { TbOmega } from 'react-icons/tb';
 import { MdDashboard } from 'react-icons/md';
-import BsChevronDown from 'react-icons/bs';
+import { BsChevronDown } from 'react-icons/bs';
 import { useState } from 'react';
 import { Menus } from '../consts';
 
