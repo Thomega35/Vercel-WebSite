@@ -2,13 +2,28 @@ import { SVGProps, useState } from 'react';
 import { Menus } from '../consts';
 
 const SideBar = () => {
-    const [open, setOpen] = useState(true);
-    const [subMenuOpen, setSubMenuOpen] = useState(false);
+    const [open, setOpen] = useState(() => {
+        // getting stored value
+        const saved = localStorage.getItem("open");
+        const initialValue = JSON.parse(saved? saved : "true");
+        return initialValue;
+    });
+    const [subMenuOpen, setSubMenuOpen] = useState(() => {
+        // getting stored value
+        const saved = localStorage.getItem("subMenuOpen");
+        const initialValue = JSON.parse(saved? saved : "false");
+        return initialValue;
+      });
 
     return (
         <>
             <div className={`bg-dark-purple flex-none min-h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
-                <MdiArrowLeft className={`bg-light-white text-dark-purple rounded-full text-5xl hover:text-6xl absolute -right-7 top-9 p-1 cursor-pointer ${!open && "-rotate-180"} duration-500`} onClick={() => {setOpen(!open);setSubMenuOpen(false)}} />
+                <MdiArrowLeft className={`bg-light-white text-dark-purple rounded-full text-5xl hover:text-6xl absolute -right-7 top-9 p-1 cursor-pointer ${!open && "-rotate-180"} duration-500`} onClick={() => {
+                    localStorage.setItem("open", JSON.stringify(!open));
+                    localStorage.setItem("subMenuOpen", JSON.stringify(false));
+                    setOpen(!open);
+                    setSubMenuOpen(false);
+                }} />
                 <div className="inline-flex mb-8">
                     <MdiOmega className={`bg-slate-400 text-3xl rounded mr-4 duration-500 ${open && "rotate-[360deg]"}`}/>
                     <span className={`text-white font-bold text-xl duration-300 ${!open && "scale-y-0"}`}>Thomas_Delapart</span>
@@ -17,11 +32,23 @@ const SideBar = () => {
                 <ul className='pt-2'>
                     {Menus.map((menu, index) => (
                         <>
-                            <li key={index} className={`text-gray-400 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-blue-900 rounded-md ${menu.spacing? "mt-9" : "mt-2"}`} onClick={() => {menu.href ? location.href=menu.href : {}}}>
+                            <li key={index} className={`text-gray-400 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-blue-900 rounded-md ${menu.spacing? "mt-9" : "mt-2"}`} onClick={() => {menu.href && !menu.submenu ? location.href=menu.href : {}}}>
                                 <span  className="text-2xl block float-left" onClick={() => {menu.href ? location.href=menu.href : location.href="/"}}> {menu.icon ? menu.icon : <MdiViewDashboard/> }</span>
                                 <span className={`text-base font-medium duration-300 ${!open && "scale-y-0"}`} onClick={() => {menu.href ? location.href=menu.href : location.href="/"}}>{menu.title}</span>
                                 {menu.submenu && open && (
-                                    <MdiChevronDown className={`text-xl ml-auto duration-200 ${subMenuOpen && "rotate-180"}`} onClick={() => setSubMenuOpen(!subMenuOpen)} />
+                                    <div className=''>
+                                        <div className='bg-gray-400 ml-auto w-0.5 h-1'></div>
+                                        <div className='ml-auto w-0.5 h-1   '></div>
+                                        <div className='bg-gray-400 ml-auto w-0.5 h-1'></div>
+                                        <div className='ml-auto w-0.5 h-1'></div>
+                                        <div className='bg-gray-400 ml-auto w-0.5 h-1'></div>
+                                    </div>
+                                )}
+                                {menu.submenu && open && (
+                                    <MdiChevronDown className={`text-xl ml-auto duration-200 ${subMenuOpen && "rotate-180"}`} onClick={() => {
+                                        localStorage.setItem("subMenuOpen", JSON.stringify(!subMenuOpen));
+                                        setSubMenuOpen(!subMenuOpen);
+                                    }}/>
                                 )}
                             </li>
                             {menu.submenu && subMenuOpen && open && (

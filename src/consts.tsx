@@ -13,7 +13,7 @@ export const Menus = [
     { title: "Projects", icon: <MdiViewDashboard/>, href: "/personal" },
     { title: "Education", icon: <MdiSchool/>, href: "/education" },
     { title: "Career", spacing: true, icon: <MdiBriefcaseVariant/>, href: "/career" },
-    { title: "Articles", submenu: true, //href: "/blog",
+    { title: "Articles", submenu: true, href: "/blog",
       submenuItems: POSTS.map((post) => ({
         title: post.data.title,
         href: `/blog/${post.slug}/`,
