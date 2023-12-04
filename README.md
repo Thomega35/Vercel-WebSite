@@ -1,6 +1,7 @@
 # Portfolio WebSite of Thomas Delapart
 
-### ⚠️This Website is currently under Development⚠️
+### ⚠️This Website is Work In Progress⚠️
+### More content will be added soon
 
 ## Content 
 
