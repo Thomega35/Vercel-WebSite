@@ -23,4 +23,4 @@
 ### Author
 
 Developed by [Thomas Delapart](https://github.com/Thomega35/) 
-you can reach me by Email : thomega35@gmail.com or Personal umber : 0770261252
+you can reach me by Email : thomega35@gmail.com
